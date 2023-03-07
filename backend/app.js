@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser())
 const cors = require("cors")
-
+// add for cors error
 app.use(
     cors({
         origin: "*"

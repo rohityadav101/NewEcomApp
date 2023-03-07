@@ -9,7 +9,7 @@ const router=express.Router();
 //create product route
 router.route("/createproduct").post(isAuthenticatedUser,createProduct)
 //get all product route
-router.route("/Products").get(isAuthenticatedUser, authRole("admin"), getAllProducts)
+router.route("/Products").get( getAllProducts)
 //update 
 router.route("/product/:id").put(isAuthenticatedUser, updateProduct ).delete(isAuthenticatedUser, deleteProduct).get(getSingleProduct)
 

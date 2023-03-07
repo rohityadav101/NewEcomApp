@@ -4,6 +4,13 @@ const cookieParser = require("cookie-parser")
 const app = express();
 app.use(express.json());
 app.use(cookieParser())
+const cors = require("cors")
+
+app.use(
+    cors({
+        origin: "*"
+    })
+)
 //routes import
 const product = require("./routes/productRoutes");
 const user = require("./routes/UserRoutes");

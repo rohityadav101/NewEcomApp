@@ -12,7 +12,7 @@ router.route("/createproduct").post(isAuthenticatedUser,createProduct)
 router.route("/Products").get( getAllProducts)
 //update 
 router.route("/product/:id").put(isAuthenticatedUser, updateProduct ).delete(isAuthenticatedUser, deleteProduct).get(getSingleProduct)
-
+//review api
 router.route("/review").put(isAuthenticatedUser,createProductReview)
 
 module.exports=router
